@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Хамелеон — Privacy Policy</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header>
+  <a class="brand-icon" href="index.html" aria-label="Хамелеон"><img src="app-icon.png" width="56" height="56" alt="Хамелеон"></a>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Хамелеон · CKO Gastronomie GmbH · Effective October 16, 2026</p>
+</header>
+
+<p class="langnav"><a href="privacy.html" lang="ru" hreflang="ru">Русский</a><span class="current" lang="en">English</span></p>
+
+<div class="card">
+  <p>Хамелеон is a game with offline core gameplay and no advertising, purchases, accounts,
+  analytics or tracking. Game data and Workshop materials are processed and stored on your
+  device; the app does not send them to the publisher. You choose whether to use photos,
+  the microphone, location, reminders or link sharing. System services, recipients you choose,
+  visits to the website and voluntary support correspondence are described separately below.</p>
+</div>
+
+<h2 id="collection">Information we collect</h2>
+<p>The game's publisher is CKO Gastronomie GmbH. The game has no registration, authentication,
+advertising or analytics SDKs, server of its own, or direct HTTP API requests. We do not receive
+your progress, photos, audio, location or tracking identifiers from the app. The app's privacy
+manifest declares <code>NSPrivacyTracking = false</code> and an empty
+<code>NSPrivacyCollectedDataTypes</code> list. Its use of <code>UserDefaults</code> for local
+progress and settings is declared with reason <code>CA92.1</code>.</p>
+<p>If you voluntarily email <a href="mailto:kej3zdzn@cloud-temp.com">kej3zdzn@cloud-temp.com</a>,
+the publisher receives your sender address, message and any attachments you choose to send.
+This correspondence is used to respond to your request. Please do not include unnecessary
+personal information. The absence of data collection from the game does not mean that we
+receive no information through such emails.</p>
+
+<h2 id="storage">Information stored on your device</h2>
+<ul>
+  <li><strong>Progress and settings.</strong> JSON Data is stored in <code>UserDefaults</code>
+  under <code>progress.v1</code> and <code>settings.v1</code>: records for the 30 campaign levels,
+  daily route records for up to the 60 most recently recorded dates, the climbing height record,
+  seen hints, sound, music and haptics settings, and the reminder setting and time. The limit
+  of 60 recorded dates is not automatic deletion after 60 days.</li>
+  <li><strong>Route library.</strong>
+  <code>Library/<wbr>Application Support/<wbr>Routes/<wbr>routes.json</code> stores each route's
+  UUID and creation date, origin and code, record and fireflies, the rounded
+  <code>placeKey</code> and label for a place-based route, a photo flag and two palette
+  colours. A tune-based route also retains MIDI note fields. The game sets no overall limit
+  on the number of saved routes and no automatic expiry period for them.</li>
+  <li><strong>Photo copies.</strong> A JPEG copy of the camera image or selected photo is saved
+  in <code>Library/<wbr>Application Support/<wbr>Routes/<wbr>Photos/</code>, with a filename
+  matching the route's UUID. Its longest side is limited to 1200 pixels, at JPEG quality 0.82.
+  This stored copy is <strong>not blurred</strong>: blur is applied only when displaying the
+  game background. It is not a temporary background; the copy stays with the saved route until
+  deletion. The camera does not automatically save the original shot to the system Photos library.</li>
+  <li><strong>Forest sound cache.</strong> Two locally synthesised WAV files for Night jungle
+  and Morning canopy are created in <code>Caches</code>: each is 60 seconds, mono, 16-bit PCM
+  at 44.1 kHz. They are not microphone recordings. iOS may clear the cache; the app can recreate it.</li>
+</ul>
+<p>The game has no cloud synchronisation of its own. However, the app does not exclude Application
+Support files or preferences from system backups: depending on your settings, they may be included
+in a device backup, including iCloud. This is a separate iOS feature, not a transfer to the publisher's server.</p>
+
+<h2 id="permissions">Device permissions and system capabilities</h2>
+<p>Access is requested when you start the related feature. Denial, cancellation or unavailability
+affects that feature, not core gameplay. Incoming links and background playback do not have a
+separate permission prompt. Most relevant screens let you open iOS Settings; after changing
+access, some screens need to be reopened. Automatic recovery on returning is not guaranteed.</p>
+<ul>
+  <li><strong>Notifications.</strong> Daily route reminders are initially off. If you enable
+  them and choose a time, the game requests permission and schedules one-off local notifications
+  for the next seven calendar days, skipping daily routes you have already completed. The
+  schedule is refreshed when you open the game and when relevant changes occur. This is not
+  an indefinitely repeating notification; without another refresh it does not extend beyond
+  that window. No delivery server is used. If permission is denied, reminders are unavailable;
+  you can still open Daily route yourself.</li>
+  <li><strong>Incoming links.</strong> <code>chamaeleo://daily</code>,
+  <code>chamaeleo://level/1</code> and links that begin with <code>chamaeleo://route/</code>
+  followed by a route code open a daily route, level or shared route locally, without a server
+  request. The game must be installed to handle them. If a link or its code is not recognised,
+  that route cannot be opened from the link; normal gameplay does not depend on it.</li>
+  <li><strong>Background audio.</strong> Forest sounds offers Night jungle and Morning canopy,
+  two locally synthesised loops. They can play in the background and with the screen locked,
+  with play and pause controls on the Lock Screen and a 15-, 30- or 60-minute sleep timer.
+  No microphone is used for this feature. Playback is optional and can be paused; unavailable
+  audio does not block the game.</li>
+  <li><strong>Camera.</strong> Workshop → Take a photo requests camera access to make a route
+  from bright areas of the frame. The JPEG copy described above is saved, not an automatic
+  original in Photos. If access is denied, you cancel, or the camera is unavailable, no new
+  route is created this way; you can keep playing or use another Workshop method.</li>
+  <li><strong>Microphone.</strong> Workshop → Hum a tune → Record a tune records up to eight
+  seconds to identify note pitches. Short PCM windows are processed in RAM; raw audio and
+  vocal timbre are not written to a file, and no cloud speech recognition is used. At least
+  four recognised notes are needed; at most 40 are used. MIDI fields are retained in the
+  derived route, while note durations indirectly affect its geometry. Denial, cancellation,
+  an unavailable microphone or too few notes prevents creating a tune-based route, not core gameplay.</li>
+  <li><strong>Photo library reading.</strong> Workshop → From library requests
+  <code>.readWrite</code> access and also supports <code>.limited</code> access. With limited
+  access, only permitted images are visible; Select more lets you expand the selection.
+  The selected image is used to build a route and save a JPEG copy. iOS is allowed to download
+  both previews and full photos from iCloud; an image not yet downloaded may need internet
+  access. Progress, Cancel and an error message, including for offline failure, are provided.
+  Denial makes import unavailable; cancellation or an error does not prevent core gameplay.</li>
+  <li><strong>Saving to Photos.</strong> After completing a route successfully, or losing a
+  Rising water attempt, Save postcard requests <code>.addOnly</code> access and saves a
+  1080 × 1350 pixel postcard to the photo library. This is a separate action, not automatic
+  saving of camera shots. The postcard's contents are described below. If permission is denied
+  or saving fails, the postcard is not saved; your game result is unchanged.</li>
+  <li><strong>Location while using the app.</strong> Workshop → This place →
+  Find this place's route requests <code>LocationWhenInUse</code> access and a one-time location
+  fix with a 20-second timeout. Coordinates are rounded to a 0.1° cell; the biome and geometry
+  are selected locally, and the route retains a rounded place key and label. The app does not
+  look up a city, use CLGeocoder or MapKit, or send the original precise coordinates outside
+  the app. The system location fix itself may use network access and Apple services. Denial,
+  unavailability or timeout prevents creating a place-based route; other modes remain available.</li>
+</ul>
+
+<h2 id="sharing">Links, postcards and sharing at your choice</h2>
+<p>The system ShareLink sheet opens at your request. A link with the <code>chamaeleo://route/</code>
+prefix contains a code with the route's geometry, theme, colours, obstacles, movement parameters
+and MIDI notes. Raw JPEGs, PCM, <code>placeKey</code> and explicit coordinates are not
+included in that code. However, it contains data derived from the source material: omitting the
+original does not guarantee anonymity. Sharing from a result screen also adds the attempt time
+to the shared text.</p>
+<p>A 1080 × 1350 postcard contains a diagram, trajectory, route name, date, time or height, and
+fireflies. It does not contain the original photo or audio. <strong>A place-based route's name
+includes rounded coordinates, so they may appear on the postcard.</strong> The game only saves
+postcards to Photos: it has no separate postcard image-sharing or Files export action. After
+saving, you may share the postcard from Photos or make other copies using system apps yourself.</p>
+<p>You choose the recipient or service used to share a link. Further processing, storage and
+forwarding depend on that recipient or service; transmission may require a network connection.
+Deleting a route in the game does not revoke links or copies already shared.</p>
+
+<h2 id="network">Network requests and third parties</h2>
+<p>Core gameplay, local route creation, incoming link parsing, forest sound synthesis and local
+reminders do not require a publisher server. This does not mean every iOS action is exclusively
+local: iCloud photo downloads, system assistance with a location fix, backups and sharing you
+choose may use networks and third-party services. iCloud features and Apple Account sign-in are
+handled by the operating system; the game does not receive their authentication tokens. Local
+photo use and location fixes do not require an Apple Account.</p>
+<p>Opening the policy in the in-app SFSafariViewController browser loads a website hosted on
+GitHub Pages and requires internet access. GitHub receives standard technical request information,
+including your IP address and browser information, under its
+<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement</a>.
+This website has no analytics of its own, advertising trackers or data collection forms. Opening
+documents and using email are separate network actions; their unavailability does not block the game.</p>
+
+<h2 id="children">Children</h2>
+<p>The game has no accounts, advertising or analytics. If a child uses optional features,
+parents or legal guardians should supervise access to photos, the microphone and location,
+postcard saving and link sharing. If you believe a child sent us personal information by email,
+please contact support so that we can consider its deletion.</p>
+
+<h2 id="rights">Your rights and deletion</h2>
+<p>You can manage permissions in iOS Settings, turn off reminders and stop forest sounds.
+Workshop → My routes → More → Delete removes the route entry and its record, and the app also
+requests deletion of the associated JPEG. File operation errors are not reported separately:
+complete file deletion cannot be guaranteed if a disk operation fails. Deleting one route does
+not clear overall progress, settings or the sound cache.</p>
+<p>Fully uninstalling the app removes its local container, but not source photos, postcards saved
+to Photos, links held by recipients, copies in Files or other apps, or system backups. Manage
+those copies separately through the relevant system or service. We have no remote access to
+your container or backups.</p>
+<p>For access, correction or deletion of information you voluntarily sent to support, or questions
+about your applicable rights, email
+<a href="mailto:kej3zdzn@cloud-temp.com">kej3zdzn@cloud-temp.com</a>. Do not send photos or
+location information unless they are needed for your request.</p>
+
+<h2 id="changes">Changes to this policy</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new
+effective date.</p>
+
+<h2 id="contact">Contact</h2>
+<p>Questions about this policy: <a href="mailto:kej3zdzn@cloud-temp.com">kej3zdzn@cloud-temp.com</a><br>
+CKO Gastronomie GmbH</p>
+
+<footer>
+  <nav><a href="index.html">Home</a><a href="terms-en.html">Terms of Use</a></nav>
+  <p>© 2026 CKO Gastronomie GmbH</p>
+</footer>
+</main>
+</body>
+</html>
